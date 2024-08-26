@@ -1,0 +1,31 @@
+.sidebar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    background-color: antiquewhite;
+}
+
+.img-sidebar{
+    
+    align-items: center;
+    margin: 0;
+    width: 50%;
+    padding: 0;
+    background-color: aqua;
+}
+
+.h2-sidebar{
+    margin: 0%;
+    text-align: center;
+}
+
+.ul-sidebar{
+    list-style-type: none;
+    text-align: justify;
+    background-color: aqua;
+}
