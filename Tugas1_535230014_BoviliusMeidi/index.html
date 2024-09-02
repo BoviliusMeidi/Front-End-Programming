@@ -8,233 +8,257 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="container">
-      <div class="cv">
-        <img
-          src="assets/BoviliusMeidi.jpg"
-          alt="Bovilius Meidi"
-          class="profile-img"
-        />
-        <h1>Bovilius Meidi</h1>
-        <h3>Mahasiswa</h3>
-        <div class="contact">
-          <ul>
-            <li>
+    <nav id="sidebar">
+      <div id="sidebar_content">
+        <div id="user">
+          <img src="assets/BoviliusMeidi.jpg" id="user_avatar" alt="Avatar" />
+
+          <p id="user_infos">
+            <span class="item-description"> Bovilius Meidi </span>
+            <span class="item-description"> Mahasiswa </span>
+          </p>
+        </div>
+
+        <ul id="side_items">
+          <li class="side-item active">
+            <a href="#home" data-section="home">
+              <i class="fa-solid fa-house-chimney"></i>
+              <span class="item-description"> Home </span>
+            </a>
+          </li>
+
+          <li class="side-item" data-section="about">
+            <a href="#about">
+              <i class="fa-solid fa-user"></i>
+              <span class="item-description"> About </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="#skills">
+              <i class="fa-solid fa-gear"></i>
+              <span class="item-description"> Skills </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="#education">
+              <i class="fa-solid fa-book"></i>
+              <span class="item-description"> Education </span>
+            </a>
+          </li>
+          <li class="side-item">
+            <a href="#experience">
+              <i class="fa-solid fa-briefcase"></i>
+              <span class="item-description"> Experience </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="#contact">
+              <i class="fa-solid fa-phone"></i>
+              <span class="item-description"> Contact </span>
+            </a>
+          </li>
+        </ul>
+        <div class="logo">
+          <hr />
+          <ul id="side_items">
+            <li class="side-item">
               <a
                 href="https://instagram.com/boviliusmeidi"
                 target="_blank"
-                class="contact-item"
-                ><i class="fab fa-instagram"></i> boviliusmeidi</a
+                class="logo-sidebar"
+                ><i class="fab fa-instagram"></i
+                ><span class="item-description"> boviliusmeidi </span></a
               >
             </li>
-            <li>
+            <li class="side-item">
               <a
                 href="https://whatsapp.com"
                 target="_blank"
-                class="contact-item"
-                ><i class="fab fa-whatsapp"></i> +62-8999999999</a
+                class="logo-sidebar"
+                ><i class="fab fa-whatsapp"></i
+                ><span class="item-description"> 0898-496-3737 </span></a
               >
             </li>
-            <li>
+            <li class="side-item">
               <a
                 href="https://github.com/BoviliusMeidi"
                 target="_blank"
-                class="contact-item"
-                ><i class="fab fa-github"></i> BoviliusMeidi</a
+                class="logo-sidebar"
+                ><i class="fab fa-github"></i
+                ><span class="item-description"> BoviliusMeidi </span></a
               >
             </li>
-            <li>
+            <li class="side-item">
               <a
                 href="https://linkedin.com/in/bovilius-meidi-813248298"
                 target="_blank"
-                class="contact-item"
-                ><i class="fab fa-linkedin"></i> Bovilius Meidi</a
+                class="logo-sidebar"
+                ><i class="fab fa-linkedin"></i
+                ><span class="item-description"> boviliusmeidi </span></a
               >
             </li>
           </ul>
         </div>
-        <div class="main">
-          <div class="left-colomn">
-            <div class="about">
-              <div class="icons-title">
-                <span class="material-icons"> person </span>
-                <h2>ABOUT ME</h2>
-              </div>
-              <p>
-                Selama SMA, saya mendapat kepercayaan untuk menjabat sebagai
-                ketua panitia buku tahunan dan acara wisuda. Pengalaman ini
-                telah melatih saya dalam berbicara di depan umum serta kemampuan
-                beradaptasi dengan cepat dalam berbagai situasi dan lingkungan.
-              </p>
-            </div>
-            <div class="experiences">
-              <div class="icons-title">
-                <span class="material-icons"> work </span>
-                <h2>WORK EXPERIENCES</h2>
-              </div>
-              <div class="experience-timeline">
-                <div class="experience-item">
-                  <div class="circle-button">2024</div>
-                  <div class="experience-details">
-                    <h4>Teaching Assistant</h4>
-                    <p>
-                      Assist lecturers in delivering Computation I (calculus and
-                      statistics) material in each meeting.
-                    </p>
-                  </div>
-                </div>
-                <div class="experience-item">
-                  <div class="circle-button">2023</div>
-                  <div class="experience-details">
-                    <h4>Graduation Committee Chairman</h4>
-                    <p>
-                      Lead and direct all committee members to achieve the
-                      predetermined targets.
-                    </p>
-                  </div>
-                </div>
-                <div class="experience-item">
-                  <div class="circle-button">2023</div>
-                  <div class="experience-details">
-                    <h4>Yearbook Committee Chairman</h4>
-                    <p>
-                      Lead and direct all committee members to achieve the
-                      predetermined targets.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="techs">
-              <div class="icons-title">
-                <span class="material-icons"> settings </span>
-                <h2>TECH STACK</h2>
-              </div>
-              <div class="tech-item">
-                <h4>Java</h4>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <h4>C++</h4>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <h4>PHP</h4>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 60%"></div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <h4>Python</h4>
-                <div class="progress-bar">
-                  <div class="progress" style="width: 60%"></div>
-                </div>
-              </div>
+
+        <button id="open_btn">
+          <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="main">
+      <section id="home" class="section-home">
+        <div class="profile-picture">
+          <img src="assets/BoviliusMeidi.jpg" alt="Profile Picture" />
+        </div>
+        <div class="intro">
+          <h1>
+            Hey there, <br />
+            I'm <span> Bovilius Meidi </span>
+          </h1>
+          <p>I'm a University Student majoring in Information Technology</p>
+        </div>
+      </section>
+      <section id="about" class="section-about">
+        <h2>About Me</h2>
+        <div class="intro">
+          <p>
+            Selama SMA, saya mendapat kepercayaan untuk menjabat sebagai ketua
+            panitia buku tahunan dan acara wisuda. Pengalaman ini telah melatih
+            saya dalam berbicara di depan umum serta kemampuan beradaptasi
+            dengan cepat dalam berbagai situasi dan lingkungan.
+          </p>
+        </div>
+        <div class="profile-picture">
+          <img src="assets/BoviliusMeidi2.jpg" alt="Bovilius Meidi" />
+          <img src="assets/YearBook.png" alt="YearBook" />
+        </div>
+      </section>
+      <section id="skills" class="section-skills">
+        <h2>My Skills</h2>
+        <div class="techs">
+          <div class="tech-item">
+            <img src="assets/Java.png" alt="Java" />
+            <h4>Java</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
             </div>
           </div>
-          <div class="right-colomn">
-            <div class="skills">
-              <div class="icons-title">
-                <span class="material-icons"> manage_accounts </span>
-                <h2>SOFT SKILLS</h2>
-              </div>
-              <ul>
-                <li class="skill-box">Leadership</li>
-                <li class="skill-box">Project Management</li>
-                <li class="skill-box">Public Speaking</li>
-              </ul>
+          <div class="tech-item">
+            <img src="assets/C++.png" alt="C++" />
+            <h4>C++</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%"></div>
             </div>
-            <div class="projects">
-              <div class="icons-title">
-                <span class="material-icons"> code </span>
-                <h2>PROJECTS</h2>
-              </div>
-              <ul>
-                <li>E-Commerce</li>
-                <p>Final Project for BackEnd-Programming</p>
-                <li>Football System</li>
-                <p>Integrated Football System with Online API</p>
-                <li>Curriculum Vitae</li>
-                <p>Responsive WEB Design for Front-End Programming</p>
-              </ul>
+          </div>
+          <div class="tech-item">
+            <img src="assets/PHP.png" alt="PHP" />
+            <h4>PHP</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
             </div>
-            <div class="education">
-              <div class="icons-title">
-                <span class="material-icons"> school </span>
-                <h2>EDUCATION</h2>
-              </div>
-              <h4>SD Suster, Singkawang</h4>
-              <p>2011-2017</p>
-              <h4>SMP Santa Maria Della Strada, Jakarta Utara</h4>
-              <p>2017-2020</p>
-              <h4>SMA Santa Maria Della Strada, Jakarta Utara</h4>
-              <p>2020-2023</p>
-            </div>
-            <div class="languages">
-              <div class="icons-title">
-                <span class="material-icons"> language </span>
-                <h2>LANGUAGES</h2>
-              </div>
-              <div class="language-item">
-                <h4>Indonesia</h4>
-                <div class="language-bars">
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                </div>
-              </div>
-              <div class="language-item">
-                <h4>English</h4>
-                <div class="language-bars">
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-empty"></div>
-                  <div class="bar-empty"></div>
-                  <div class="bar-empty"></div>
-                </div>
-              </div>
-              <div class="language-item">
-                <h4>Chinese</h4>
-                <div class="language-bars">
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-filled"></div>
-                  <div class="bar-empty"></div>
-                  <div class="bar-empty"></div>
-                  <div class="bar-empty"></div>
-                </div>
-              </div>
+          </div>
+          <div class="tech-item">
+            <img src="assets/Python.png" alt="Python" />
+            <h4>Python</h4>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
             </div>
           </div>
         </div>
-      </div>
+        <div>
+          <ul>
+            <li class="skill-box">Leadership</li>
+            <li class="skill-box">Project Management</li>
+            <li class="skill-box">Public Speaking</li>
+          </ul>
+        </div>
+      </section>
+      <section id="education" class="section-education">
+        <h2>Education</h2>
+
+        <div class="education-entry">
+          <h3>Bachelor in Information Technology</h3>
+          <h4>Tarumanagara University (2023 - Present)</h4>
+          <p>IPK 4.00</p>
+        </div>
+
+        <div class="education-entry">
+          <h4>SMA Santa Maria Della Strada (2019 - 2023)</h4>
+          <p>93.01</p>
+        </div>
+      </section>
+      <section id="experience" class="section-experience">
+        <h2>Experience</h2>
+        <div class="experience-content">
+          <div class="experience-entry">
+            <h3>E-Commerce</h3>
+            <p>
+              Developed an E-Commerce platform for the Back-End Programming
+              final project.
+            </p>
+          </div>
+          <div class="experience-entry">
+            <h3>Football System</h3>
+            <p>Integrated a football system with an online API.</p>
+          </div>
+          <div class="experience-entry">
+            <h3>Landing Page Portfolio</h3>
+            <p>Developed a landing page for a Front-End Programming task.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section-contact">
+        <h2>Contact Me</h2>
+        <p>
+          I'm available for work from home for developing websites,
+          applications, and project development in Indonesia. Use the form to
+          inquire about rates and availability, or email me directly.
+        </p>
+        <div class="contact-info">
+          <p>Email: boviliusbm@gmail.com | Phone: 0898-496-3737</p>
+        </div>
+        <form action="" method="post" class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
