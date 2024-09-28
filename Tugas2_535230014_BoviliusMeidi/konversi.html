@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Nilai</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .main {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+      }
+
+      input {
+        width: 12rem;
+        margin-right: 1rem;
+      }
+
+      input,
+      button {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 1rem;
+      }
+
+      button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Konversi Nilai Angka</h1>
+      <input
+        type="number"
+        id="nilai"
+        placeholder="Masukkan nilai angka"
+        min="0"
+        max="100"
+      />
+      <button onclick="konversiNilai()">Konversi</button>
+      <p id="hasil"></p>
+    </div>
+
+    <script>
+      function konversiNilai() {
+        var nilai = parseInt(document.getElementById("nilai").value);
+        var hasil;
+
+        if (nilai >= 0 && nilai <= 40) {
+          hasil = "E";
+        } else if (nilai >= 41 && nilai <= 55) {
+          hasil = "D";
+        } else if (nilai >= 56 && nilai <= 70) {
+          hasil = "C";
+        } else if (nilai >= 71 && nilai <= 80) {
+          hasil = "B";
+        } else if (nilai >= 81 && nilai <= 100) {
+          hasil = "A";
+        } else {
+          hasil = "Nilai tidak valid";
+        }
+
+        document.getElementById("hasil").innerText = "Nilai Huruf: " + hasil;
+      }
+    </script>
+  </body>
+</html>
