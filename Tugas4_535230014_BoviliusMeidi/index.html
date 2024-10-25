@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lifestyle Theme</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div>
+        <h1>Welcome to Our Lifestyle Brand</h1>
+        <p>Your journey to a better lifestyle starts here.</p>
+        <a href="#" class="btn btn-primary explore-btn" id="exploreMoreBtn"
+          >Explore More</a
+        >
+      </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg d-none fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand p-3 fw-bold" href="#">
+          <img
+            src="/assets/Logo_BM37.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+          Lifestyle Vibes</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-2 ms-auto">
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="btn btn-primary fs-5"
+                role="button"
+                data-bs-toggle="modal"
+                data-bs-target="#subscribeModal"
+                >Subscribe</a
+              >
+            </li>
+            <li class="nav-item ms-5">
+              <button class="btn" id="themeToggle">
+                <i id="themeIcon" class="bi bi-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade modal-fullwidth"
+      id="plansModal"
+      tabindex="-1"
+      aria-labelledby="plansModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="plansModalLabel">
+              Choose Your Subscription Plan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container subscribe-plan">
+              <div class="row flex-column flex-md-row">
+                <!-- Tabs on the top for mobile -->
+                <div class="col-md-3 d-flex justify-content-center">
+                  <ul
+                    class="nav nav-pills flex-md-column justify-content-center"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active w-100"
+                        id="free-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#free"
+                        type="button"
+                        role="tab"
+                      >
+                        <h1>Rp 0</h1>
+                        <small>Free</small>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link w-100"
+                        id="regular-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#regular"
+                        type="button"
+                        role="tab"
+                      >
+                        <h1>Rp 50.000/Bulan</h1>
+                        <small>Regular</small>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link w-100"
+                        id="premium-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#premium"
+                        type="button"
+                        role="tab"
+                      >
+                        <h1>Rp 100.000/Bulan</h1>
+                        <small>Premium</small>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-md-9">
+                  <div class="tab-content">
+                    <div
+                      class="tab-pane fade show active bg-body-secondary"
+                      id="free"
+                      role="tabpanel"
+                    >
+                      <div class="plan-card">
+                        <div class="plan-content">
+                          <h3>Free Plan</h3>
+                          <ul>
+                            <li>Access to daily lifestyle tips</li>
+                            <li>1 exclusive article per month</li>
+                            <li>Basic fitness guides</li>
+                            <li>
+                              Limited access to recipes and fashion advice
+                            </li>
+                          </ul>
+                          <p class="plan-price">Rp 0</p>
+                          <button class="btn btn-buy">SUBSCRIBE NOW</button>
+                        </div>
+                        <div class="plan-image">
+                          <p class="testimonial">
+                            "Even the free plan offers fantastic tips and advice
+                            to help me improve my daily routine."
+                          </p>
+                          <p class="testimonial-author">- Jane Doe</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade bg-body-secondary"
+                      id="regular"
+                      role="tabpanel"
+                    >
+                      <div class="plan-card">
+                        <div class="plan-content">
+                          <h3>Regular Plan</h3>
+                          <ul>
+                            <li>Daily personalized lifestyle tips</li>
+                            <li>Access to exclusive articles</li>
+                            <li>Weekly fitness and wellness guides</li>
+                            <li>
+                              Access to premium fashion advice, and beauty tips
+                            </li>
+                          </ul>
+                          <p class="plan-price">Rp 50.000/Bulan</p>
+                          <button class="btn btn-buy">SUBSCRIBE NOW</button>
+                        </div>
+                        <div class="plan-image">
+                          <p class="testimonial">
+                            "I love the regular plan! The lifestyle tips and
+                            recipes are exactly what I need to stay healthy and
+                            stylish."
+                          </p>
+                          <p class="testimonial-author">- John Smith</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab-pane fade bg-body-secondary"
+                      id="premium"
+                      role="tabpanel"
+                    >
+                      <div class="plan-card">
+                        <div class="plan-content">
+                          <h3>Premium Plan</h3>
+                          <ul>
+                            <li>
+                              Unlimited access to all lifestyle tips and
+                              articles
+                            </li>
+                            <li>
+                              Exclusive VIP content including live webinars
+                            </li>
+                            <li>
+                              Advanced fitness programs and beauty tutorials
+                            </li>
+                            <li>Priority support and personalized coaching</li>
+                          </ul>
+                          <p class="plan-price">Rp 100.000/Bulan</p>
+                          <button class="btn btn-buy">SUBSCRIBE NOW</button>
+                        </div>
+                        <div class="plan-image">
+                          <p class="testimonial">
+                            "The premium plan has changed my life! The
+                            personalized coaching and VIP content are worth
+                            every penny."
+                          </p>
+                          <p class="testimonial-author">- Emily Clark</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="subscribeModal"
+      tabindex="-1"
+      aria-labelledby="subscribeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-secondary bg-gradient rounded-4">
+          <section aria-label="Subscribe example" class="container p-5">
+            <article>
+              <h2 class="text-center mb-4">Join Our Community</h2>
+              <h4 class="text-center mb-4">
+                Subscribe for the latest lifestyle updates
+              </h4>
+              <form class="row g-3 justify-content-center" id="subscribeForm">
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    class="form-control"
+                    placeholder="Full Name"
+                    aria-label="Full Name"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email"
+                    aria-label="Email"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary w-100">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+              <p class="text-center mt-3 text-muted">
+                By subscribing, you agree to receive our newsletters and agree
+                with our
+                <a href="#" class="text-decoration-none text-white"
+                  >Privacy Policy</a
+                >.
+              </p>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="notificationModal"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="notificationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Subscription Successful</h5>
+          </div>
+          <div class="modal-body">
+            <p>You have successfully subscribed!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-first-page text-white d-none">
+      <div
+        class="d-flex flex-column gap-4 justify-content-center align-items-center first-page"
+      >
+        <h2 class="display-1">
+          Welcome to the <mark class="rounded-4">Lifestyle Hub</mark>
+        </h2>
+        <p class="text-black">
+          Explore trends, wellness, and living your best life
+        </p>
+        <p class="w-75">
+          Lifestyle is all about finding balance, embracing health, and living
+          in the moment. Whether you're into fitness, mindfulness, or just
+          looking to elevate your daily routines, you've come to the right
+          place.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-fluid w-75 carousel-section d-none">
+      <div class="row gap-3">
+        <div
+          id="demo"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#demo"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Balance Life"
+                class="d-block w-100 carousel-image"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1666736570001-090f71dbe53f?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhlYWx0aHklMjBsaWZlc3R5bGV8ZW58MHwwfDB8fHww"
+                alt="Relaxing Life"
+                class="d-block w-100 carousel-image"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1663056025073-a9c4344f8e75?auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Healthy Life"
+                class="d-block w-100 carousel-image"
+              />
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://unsplash.com"
+          target="_blank"
+          class="text-decoration-none"
+          >Photo from Unsplash</a
+        >
+      </div>
+    </div>
+
+    <div class="tab-section d-none">
+      <div class="bg-dark-subtle">
+        <div class="container w-75 mt-5 pt-3">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="wellness-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#wellness"
+                type="button"
+                role="tab"
+              >
+              <h3>Wellness</h3>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="fashion-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#fashion"
+                type="button"
+                role="tab"
+              >
+                <h3>Fashion</h3>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content bg-dark-subtle" id="myTabContent">
+        <div class="tab-pane fade show active" id="wellness" role="tabpanel">
+          <div class="container w-75">
+            <h1 class="display-3">Latest in Wellness</h1>
+            <p>
+              Discover the latest trends in wellness, from meditation techniques
+              to fitness tips that keep you grounded and healthy.
+            </p>
+          </div>
+          <div
+            id="wellnessCarousel"
+            class="carousel slide carousel-fade bg-black"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#wellnessCarousel"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#wellnessCarousel"
+                data-bs-slide-to="1"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div
+                  class="d-block w-100 background-row"
+                  style="
+                    background-image: url(https://images.unsplash.com/photo-1524863479829-916d8e77f114?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA2fHx3ZWxsbmVzc3xlbnwwfDB8MHx8fDA%3D);
+                  "
+                >
+                  <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="text-decoration-none">
+                      <h1 class="text-white">Meditation for Mindfulness</h1>
+                      <p class="text-white">
+                        Mindfulness meditation is one of the most popular
+                        practices for enhancing mental well-being. It helps you
+                        remain present, reduce stress, and boost emotional
+                        health. As Buddha said, "Peace comes from within. Do not
+                        seek it without." Start with just a few minutes a day to
+                        experience the positive impact.
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div
+                  class="d-block w-100 background-row"
+                  style="
+                    background-image: url(https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                  "
+                >
+                  <div class="carousel-caption d-none d-md-block">
+                    <a href="#" class="text-decoration-none">
+                      <h1 class="text-white">Quick Fitness Hacks</h1>
+                      <p class="text-white">
+                        Fitness doesn't have to be time-consuming. A 10-minute
+                        workout can increase energy and productivity. Try
+                        incorporating short bursts of activity throughout your
+                        day—even a brisk walk can make a difference. Remember,
+                        "The only bad workout is the one that didn't happen."
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="fashion" role="tabpanel">
+          <div class="container w-75">
+            <h1 class="display-3">Explore Fashion & Trends</h1>
+            <p>
+              Stay ahead in fashion with insights into what's trending,
+              sustainable fashion tips, and more.
+            </p>
+          </div>
+          <div
+            class="row background-row"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1603122630570-7fd434d470d0?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGZhc2hpb24lMjBhbmQlMjB0cmVuZHxlbnwwfDB8MHx8fDA%3D);
+              background-position: top;
+            "
+          >
+            <a
+              href="#"
+              class="col-lg-3 align-content-lg-center"
+              data-bs-toggle="tooltip"
+              title="Trendy Must Haves"
+            >
+              <div class="card bg-transparent text-white">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Trendy Must Haves</h4>
+                  <p class="card-text fs-6">
+                    This season's must-haves include oversized blazers, bold
+                    prints, and vintage-inspired accessories. Fashion is
+                    ever-evolving, so keeping your wardrobe versatile is key. As
+                    Coco Chanel said, "Fashion fades, only style remains the
+                    same."
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="col-lg-3 align-content-lg-center"
+              data-bs-toggle="tooltip"
+              title="Sustainable Fashion"
+            >
+              <div class="card bg-transparent text-white">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Sustainable Fashion</h4>
+                  <p class="card-text fs-6">
+                    With the rise of eco-conscious consumers, sustainable
+                    fashion is more than just a trend — it's a movement. Opt for
+                    eco-friendly fabrics, thrifted pieces, and brands that
+                    prioritize ethical production. Every small step toward
+                    sustainability matters in protecting our planet.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="col-lg-3 align-content-lg-center"
+              data-bs-toggle="tooltip"
+              title="Personalized Style"
+            >
+              <div class="card bg-transparent text-white">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Personalized Style</h4>
+                  <p class="card-text fs-6">
+                    Fashion is a personal expression of who you are. Whether
+                    you're into minimalist styles or daring patterns, embrace
+                    what makes you unique. Remember, "Style is a way to say who
+                    you are without having to speak" — Rachel Zoe.
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="#"
+              class="col-lg-3 align-content-lg-center"
+              data-bs-toggle="tooltip"
+              title="Streetwear Culture"
+            >
+              <div class="card bg-transparent text-white">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Streetwear Culture</h4>
+                  <p class="card-text fs-6">
+                    Streetwear has become a dominant force in global fashion,
+                    blending comfort with creativity. Explore the influence of
+                    sports, hip-hop culture, and graphic design in modern
+                    streetwear. It's more than just a fashion choice — it's a
+                    lifestyle.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      aria-label="Subscribe example"
+      class="container w-75 bg-body-secondary rounded-4 p-5 my-5 d-none"
+      id="joinOurCommunity"
+    >
+      <div class="container row gap-5">
+        <div
+          class="col form-join-left text-white d-flex flex-column justify-content-center align-items-start"
+        >
+          <h1 class="display-1">
+            Lifestyle <br />
+            Vibes.
+          </h1>
+          <p class="mb-5">
+            Lifestyle is all about finding balance, embracing health, and living
+            in the moment.
+          </p>
+          <a
+            name=""
+            id=""
+            class="btn btn-primary p-3 rounded-5"
+            href="contact.html"
+            role="button"
+            >Contact Us</a
+          >
+        </div>
+        <div class="col">
+          <h2 class="text-center mb-2 display-5">Join Our Community</h2>
+          <p class="text-center mb-5">
+            Subscribe for the latest lifestyle updates
+          </p>
+          <form
+            class="col d-flex flex-column gap-3 justify-content-center"
+            id="subscribeFormTwo"
+          >
+            <div class="col">
+              <input
+                type="text"
+                id="fullnameTwo"
+                name="fullname"
+                class="form-control"
+                placeholder="Full Name"
+                aria-label="Full Name"
+                required
+              />
+            </div>
+            <div class="col">
+              <input
+                type="email"
+                id="emailTwo"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                aria-label="Email"
+                required
+              />
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-primary w-100">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <p class="text-center mt-5 text-muted">
+            By subscribing, you agree to receive our newsletters and agree with
+            our
+            <a href="#" class="text-decoration-none text-white"
+              >Privacy Policy</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="container-fluid text-white py-4 mt-4 d-none">
+      <div class="container w-75">
+        <div class="footer-bottom">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-3">
+              <a
+                class="navbar-brand d-flex align-items-center p-3 fw-bold"
+                href="#"
+              >
+                <img
+                  src="/assets/Logo_BM37.png"
+                  alt="Logo"
+                  width="30"
+                  height="30"
+                  class=""
+                />
+                <h4 class="m-0">Lifestyle Vibes</h4></a
+              >
+            </div>
+            <div class="col-md-6">
+              <div class="col align-content-start">
+                <a href="#" class="text-decoration-none text-white"
+                  >Privacy Policy</a
+                >
+                |
+                <a href="#" class="text-decoration-none text-white"
+                  >Terms & Conditions
+                </a>
+                |
+                <a href="#" class="text-decoration-none text-white"
+                  >Trust Center</a
+                >
+                |
+                <a href="#" class="text-decoration-none text-white"
+                  >License Agreements</a
+                >
+              </div>
+              <div class="col">
+                Copyright &copy; 2024 Lifestyle Vibes. All Rights Reserved.
+              </div>
+            </div>
+            <div
+              class="col-md-3 d-flex justify-content-between align-content-center"
+            >
+              <a
+                name=""
+                id=""
+                class="btn bi-facebook bi-size text-white"
+                href="https://www.facebook.com/villi.bong/"
+                role="button"
+              ></a
+              ><a
+                name=""
+                id=""
+                class="btn bi-github bi-size text-white"
+                href="https://github.com/BoviliusMeidi"
+                role="button"
+              ></a
+              ><a
+                name=""
+                id=""
+                class="btn bi-youtube bi-size text-white"
+                href="https://www.youtube.com/@bovilius37"
+                role="button"
+              ></a
+              ><a
+                name=""
+                id=""
+                class="btn bi-instagram bi-size text-white"
+                href="https://www.instagram.com/boviliusmeidi/"
+                role="button"
+              ></a
+              ><a
+                name=""
+                id=""
+                class="btn bi-linkedin bi-size text-white"
+                href="https://www.linkedin.com/in/bovilius-meidi-813248298/?originalSubdomain=id"
+                role="button"
+              ></a>
+            </div>
+          </div>
+          <div class="text-end">
+            <p>Created by <strong>Bovilius Meidi - 535230014</strong></p>
+          </div>
+          <div class="col-md-9">
+            <p>
+              Lifestyle Vibes and certain product names used herein are
+              trademarks or registered trademarks of Bovilius Meidi and/or
+              Unsplash for the image. See Trademarks for appropriate markings.
+              Any other trademarks contained herein are the property of their
+              respective owners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
